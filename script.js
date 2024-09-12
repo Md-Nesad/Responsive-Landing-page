@@ -19,9 +19,8 @@ window.onscroll = function() {
 }
 
 function scrollToTop () {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    alert('Back to top')
+    document.body.scrollTo({top: 0, behavior: 'smooth'});
+    document.documentElement.scrollTo({top: 0, behavior: 'smooth'});
 }
 // resposive nav
 function showNav() {
