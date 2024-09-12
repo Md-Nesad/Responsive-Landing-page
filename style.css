@@ -80,7 +80,6 @@ nav {
   align-items: center;
   gap: 2rem;
 }
-  
   .link a {
     font-weight: 500;
     color: var(--text-light);
@@ -611,6 +610,14 @@ nav {
   @media (width < 600px) {
     .nav__links {
       display: none;
+      animation: zoomInnav 3s;
+    }
+    @keyframes zoomInnav {
+      from{
+        transform: scale(0.5);
+      }to{
+        transform: scale(1);
+      }
     }
     #res-button {
     display: block;
