@@ -67,6 +67,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
   background-color: var(--extra-light);
 }
 .nav__logo a {
@@ -93,7 +96,7 @@ nav {
     display: none;
     position: absolute;
     right: 1rem;
-    top: 1.50rem;
+    top: 1rem;
     cursor: pointer;
     padding: .50rem;
   }
@@ -564,7 +567,13 @@ nav {
     nav .btn {
       display: none;
     }
-  
+    .nav__links {
+      display: none;
+    }
+    #res-button {
+      display: block;
+      margin-right: 2.50rem;
+    }
     .header__container img {
       margin-top: 1.25rem;
     }
@@ -610,14 +619,9 @@ nav {
   @media (width < 600px) {
     .nav__links {
       display: none;
-      animation: zoomInnav 3s;
     }
-    @keyframes zoomInnav {
-      from{
-        transform: scale(0.5);
-      }to{
-        transform: scale(1);
-      }
+    nav{
+      position: sticky;
     }
     #res-button {
     display: block;

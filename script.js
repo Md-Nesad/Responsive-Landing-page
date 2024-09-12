@@ -24,13 +24,16 @@ function scrollToTop () {
 }
 // resposive nav
 function showNav() {
-    let nav = document.getElementById('navigation');
+    let nav = document.getElementById('home');
+    let navLink = document.getElementById('navigation');
     let button = document.getElementById('res-button');
-     if(nav.style.display === 'block') {
-        nav.style.display = 'none';
+     if(navLink.style.display === 'block') {
+        navLink.style.display = 'none';
+        nav.style.transition = '5s';
         button.innerHTML = '<i class="ri-menu-line"></i>'
      }else{
-        nav.style.display = 'block';
+        nav.style.transition = '5s'
+        navLink.style.display = 'block';
         button.innerHTML = '<i class="ri-close-large-line"></i>'
      }
 }
